@@ -15,17 +15,3 @@ SELECT
     ship_cost
 FROM {{ ref('finance_days') }}
 LEFT JOIN {{ ref('int_campaigns') }} USING(date_date)
-
-Save
-
-11121389106714151617
-
-
-
-
-
-dbt Wizard
-Commands
-Results
-Problems
-$0
