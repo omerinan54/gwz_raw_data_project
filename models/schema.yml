@@ -1,0 +1,36 @@
+version : 2
+
+sources:
+  - name: raw
+    schema: gz_raw_data
+    description: raw tables
+    tables:
+      - name: sales
+        identifier: raw_gz_sales
+        description: sales informations of greenweenz platform   
+        columns:
+          - name: orders_id
+            description: unique id of sales
+            tests:
+               - unique:
+                   arguments:
+                      column_name: "orders_id || '-' || pdt_id "
+               - not_null 
+      - name: product
+        identifier: raw_gz_product
+        description: product informations of greenwenz platfom
+        columns:
+          - name: products_id
+            description: unique id of products
+            tests:
+               - unique
+               - not_null 
+      - name: ship
+        identifier: raw_gz_ship 
+        description: shipping information of greenwenz platform
+        columns:
+          - name: orders_id
+            description: unique id of ship
+            tests:
+               - unique
+               - not_null 
