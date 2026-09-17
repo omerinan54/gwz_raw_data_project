@@ -33,4 +33,16 @@ sources:
             description: unique id of ship
             tests:
                - unique
-               - not_null 
+               - not_null
+      - name: adwords
+        identifier: raw_gz_adwords 
+        description: adwords information of greenwenz platform   
+      - name: bing
+        identifier: raw_gz_bing
+        description: bing information of greenwenz platform 
+      - name: criteo
+        identifier: raw_gz_criteo 
+        description: criteo information of greenwenz platform               
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: facebook information of greenwenz platform      
